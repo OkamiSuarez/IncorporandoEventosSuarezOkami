@@ -32,6 +32,7 @@ h1 {
   font-weight: 500px;
   font-size: 40px;
   margin: 0;
+  text-align: center;
 }
 
 #producto-contenedor {
@@ -46,6 +47,8 @@ h1 {
 
 p {
   line-height: 1.8;
+  color: white;
+  text-align: center;
 }
 
 .card {
