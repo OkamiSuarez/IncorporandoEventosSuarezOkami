@@ -116,25 +116,30 @@
 
 
 
-
+   
 const formulario = document.getElementById("form");
-const nombre = document.getElementById("nombre");
-const direccion = document.getElementById("direccion");
-const confirmarDireccion = document.getElementById("confirmarDireccion");
-const telefono = document.getElementById("telefono");
+
 
 formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
 
+    const nombre = document.getElementById("nombre").value;
+    const direccion = document.getElementById("direccion").value;
+    const confirmarDireccion = document.getElementById("confirmarDireccion").value;
+    const telefono = document.getElementById("telefono").value;
+   
+    e.preventDefault();
+    
     const datosUsuario = {
-        nombre: nombre.value,
-        direccion: direccion.value,
-        confirmarDireccion: confirmarDireccion.value,
-        telefono: telefono.value
+        nombre,
+        direccion,
+        confirmarDireccion,
+        telefono
     }
 
     console.log(datosUsuario)
 
     const infoUserJson = JSON.stringify(datosUsuario);
     localStorage.setItem("Datos del usuario", infoUserJson);
+
+    alert("Has ingresado tus datos");
 })
